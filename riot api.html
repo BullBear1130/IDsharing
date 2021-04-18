@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      const riotID = prompt("Riot ID")
+      fetch('https://kr.api.riotgames.com/lol/summoner/v4/summoners/by-name/${riotID}?api_key=RGAPI-c885b829-45ec-4e07-95ed-3a295e06f076', {
+        headers: {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36",
+    "Accept-Language": "ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7",
+    "Accept-Charset": "application/x-www-form-urlencoded; charset=UTF-8",
+    "Origin": "https://developer.riotgames.com",
+    "X-Riot-Token": "RGAPI-c885b829-45ec-4e07-95ed-3a295e06f076"
+}
+      })
+      .then((response) => response.json())
+      .then((data) => console.log(data))
+
+
+    </script>
+  </body>
+</html>
